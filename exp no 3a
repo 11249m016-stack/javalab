@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class BooksStartingWithA {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String[] books = new String[10];
+for (int i = 0; i &lt; books.length; i++) {
+System.out.print(&quot;Enter book title &quot; + (i + 1) + &quot;: &quot;);
+books[i] = sc.nextLine();
+}
+System.out.println(&quot;Books starting with A:&quot;);
+for (String book : books) {
+if (book.toLowerCase().startsWith(&quot;a&quot;))
+System.out.println(book);
+}
+sc.close();
+}
+}
