@@ -1,0 +1,11 @@
+public class TrainCodeException {
+public static void main(String[] args) {
+String[] codes = {&quot;12625&quot;, &quot;12727&quot;, &quot;17653&quot;};
+try {
+System.out.println(&quot;Train code: &quot; + codes[1]);
+System.out.println(&quot;Train code: &quot; + codes[5]);
+} catch (ArrayIndexOutOfBoundsException e) {
+System.out.println(&quot;Error: Invalid train-code index.&quot;);
+}
+}
+}
