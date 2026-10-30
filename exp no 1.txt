@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class ControlStatements {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int n = 6;
+if (n &gt; 0) System.out.println(&quot;Positive number&quot;);
+if (n % 2 == 0) System.out.println(&quot;Even&quot;);
+else System.out.println(&quot;Odd&quot;);
+int choice = 2;
+switch (choice) {
+case 1: System.out.println(&quot;One&quot;); break;
+case 2: System.out.println(&quot;Two&quot;); break;
+default: System.out.println(&quot;Other&quot;);
+}
+System.out.print(&quot;For: &quot;);
+for (int i = 1; i &lt;= 5; i++) System.out.print(i + &quot; &quot;);
+System.out.print(&quot;\\nWhile: &quot;);
+int j = 1;
+while (j &lt;= 5) { System.out.print(j + &quot; &quot;); j++; }
+System.out.print(&quot;\\nDo-while: &quot;);
+int k = 1;
+do { System.out.print(k + &quot; &quot;); k++; } while (k &lt;= 5);
+sc.close();
+}
+}
