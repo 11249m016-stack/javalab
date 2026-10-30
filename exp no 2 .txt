@@ -1,28 +1,33 @@
 class Student {
-String name;
-int rollNo, marks;
-Student(String name, int rollNo, int marks) {
-this.name = name;
-this.rollNo = rollNo;
-this.marks = marks;
+    String name;
+    int rollNo, marks;
+
+    Student(String name, int rollNo, int marks) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.marks = marks;
+    }
+
+    String grade() {
+        if (marks >= 90) return "A";
+        if (marks >= 75) return "B";
+        if (marks >= 60) return "C";
+        if (marks >= 40) return "D";
+        return "F";
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Roll No: " + rollNo
+                + ", Marks: " + marks + ", Grade: " + grade());
+    }
 }
-String grade() {
-if (marks &gt;= 90) return &quot;A&quot;;
-if (marks &gt;= 75) return &quot;B&quot;;
-if (marks &gt;= 60) return &quot;C&quot;;
-if (marks &gt;= 40) return &quot;D&quot;;
-return &quot;F&quot;;
-}
-void display() {
-System.out.println(&quot;Name: &quot; + name + &quot;, Roll No: &quot; + rollNo
-+ &quot;, Marks: &quot; + marks + &quot;, Grade: &quot; + grade());
-}
-}
+
 public class StudentDemo {
-public static void main(String[] args) {
-Student s1 = new Student(&quot;Ravi&quot;, 101, 86);
-Student s2 = new Student(&quot;Priya&quot;, 102, 94);
-s1.display();
-s2.display();
-}
+    public static void main(String[] args) {
+        Student s1 = new Student("Ravi", 101, 86);
+        Student s2 = new Student("Priya", 102, 94);
+
+        s1.display();
+        s2.display();
+    }
 }
