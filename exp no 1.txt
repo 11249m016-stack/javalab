@@ -1,25 +1,48 @@
 import java.util.Scanner;
+
 public class ControlStatements {
-public static void main(String[] args) {
-Scanner sc = new Scanner(System.in);
-int n = 6;
-if (n &gt; 0) System.out.println(&quot;Positive number&quot;);
-if (n % 2 == 0) System.out.println(&quot;Even&quot;);
-else System.out.println(&quot;Odd&quot;);
-int choice = 2;
-switch (choice) {
-case 1: System.out.println(&quot;One&quot;); break;
-case 2: System.out.println(&quot;Two&quot;); break;
-default: System.out.println(&quot;Other&quot;);
-}
-System.out.print(&quot;For: &quot;);
-for (int i = 1; i &lt;= 5; i++) System.out.print(i + &quot; &quot;);
-System.out.print(&quot;\\nWhile: &quot;);
-int j = 1;
-while (j &lt;= 5) { System.out.print(j + &quot; &quot;); j++; }
-System.out.print(&quot;\\nDo-while: &quot;);
-int k = 1;
-do { System.out.print(k + &quot; &quot;); k++; } while (k &lt;= 5);
-sc.close();
-}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = 6;
+
+        if (n > 0)
+            System.out.println("Positive number");
+
+        if (n % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+
+        int choice = 2;
+        switch (choice) {
+            case 1:
+                System.out.println("One");
+                break;
+            case 2:
+                System.out.println("Two");
+                break;
+            default:
+                System.out.println("Other");
+        }
+
+        System.out.print("\nFor: ");
+        for (int i = 1; i <= 5; i++)
+            System.out.print(i + " ");
+
+        System.out.print("\nWhile: ");
+        int j = 1;
+        while (j <= 5) {
+            System.out.print(j + " ");
+            j++;
+        }
+
+        System.out.print("\nDo-while: ");
+        int k = 1;
+        do {
+            System.out.print(k + " ");
+            k++;
+        } while (k <= 5);
+
+        sc.close();
+    }
 }
